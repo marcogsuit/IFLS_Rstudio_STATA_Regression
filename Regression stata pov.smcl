@@ -1,0 +1,67 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\marco\Documents\Bootcamp Data Science\project portofolio\Regression stata pov.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}11 Jul 2021, 18:21:26
+
+{com}. Transfer Donor Model
+{err}unrecognized command:  Transfer
+{txt}{search r(199):r(199);}
+
+{com}. reg td y a m sex g o e
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}   12971
+{txt}{hline 13}{char +}{hline 30}           F(  7, 12963) ={res}   10.09
+    {txt}   Model {char |} {res} 1.6418e+18     7  2.3455e+17           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 3.0123e+20 12963  2.3238e+16           {txt}R-squared     = {res} 0.0054
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.0049
+    {txt}   Total {char |} {res} 3.0287e+20 12970  2.3352e+16           {txt}Root MSE      = {res} 1.5e+08
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          td{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 11}y {c |}{col 14}{res}{space 2} .0002783{col 26}{space 2} .0000578{col 37}{space 1}    4.82{col 46}{space 3}0.000{col 54}{space 4}  .000165{col 67}{space 3} .0003915
+{txt}{space 11}a {c |}{col 14}{res}{space 2} 10882.44{col 26}{space 2} 98948.44{col 37}{space 1}    0.11{col 46}{space 3}0.912{col 54}{space 4}  -183071{col 67}{space 3} 204835.9
+{txt}{space 11}m {c |}{col 14}{res}{space 2}  9590097{col 26}{space 2}  4293247{col 37}{space 1}    2.23{col 46}{space 3}0.026{col 54}{space 4}  1174701{col 67}{space 3} 1.80e+07
+{txt}{space 9}sex {c |}{col 14}{res}{space 2} 999750.9{col 26}{space 2}  4571293{col 37}{space 1}    0.22{col 46}{space 3}0.827{col 54}{space 4} -7960655{col 67}{space 3}  9960157
+{txt}{space 11}g {c |}{col 14}{res}{space 2}  2722081{col 26}{space 2}  2837890{col 37}{space 1}    0.96{col 46}{space 3}0.337{col 54}{space 4} -2840600{col 67}{space 3}  8284762
+{txt}{space 11}o {c |}{col 14}{res}{space 2}  9750829{col 26}{space 2}  4364514{col 37}{space 1}    2.23{col 46}{space 3}0.025{col 54}{space 4}  1195740{col 67}{space 3} 1.83e+07
+{txt}{space 11}e {c |}{col 14}{res}{space 2} 881074.7{col 26}{space 2} 210024.2{col 37}{space 1}    4.20{col 46}{space 3}0.000{col 54}{space 4} 469396.3{col 67}{space 3}  1292753
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.10e+07{col 26}{space 2}  7179616{col 37}{space 1}   -1.53{col 46}{space 3}0.126{col 54}{space 4}-2.50e+07{col 67}{space 3}  3101302
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. Transfer Beneficiary Model
+{err}unrecognized command:  Transfer
+{txt}{search r(199):r(199);}
+
+{com}. reg tb y a m sex g o e
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}   12971
+{txt}{hline 13}{char +}{hline 30}           F(  7, 12963) ={res}    6.52
+    {txt}   Model {char |} {res} 5.2430e+17     7  7.4901e+16           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 1.4884e+20 12963  1.1482e+16           {txt}R-squared     = {res} 0.0035
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.0030
+    {txt}   Total {char |} {res} 1.4937e+20 12970  1.1516e+16           {txt}Root MSE      = {res} 1.1e+08
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          tb{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 11}y {c |}{col 14}{res}{space 2}-6.52e-06{col 26}{space 2} .0000406{col 37}{space 1}   -0.16{col 46}{space 3}0.873{col 54}{space 4}-.0000861{col 67}{space 3} .0000731
+{txt}{space 11}a {c |}{col 14}{res}{space 2}-238186.3{col 26}{space 2} 69554.18{col 37}{space 1}   -3.42{col 46}{space 3}0.001{col 54}{space 4}-374522.7{col 67}{space 3}-101849.9
+{txt}{space 11}m {c |}{col 14}{res}{space 2} -2239934{col 26}{space 2}  3017868{col 37}{space 1}   -0.74{col 46}{space 3}0.458{col 54}{space 4} -8155398{col 67}{space 3}  3675530
+{txt}{space 9}sex {c |}{col 14}{res}{space 2}  1240467{col 26}{space 2}  3213315{col 37}{space 1}    0.39{col 46}{space 3}0.699{col 54}{space 4} -5058103{col 67}{space 3}  7539037
+{txt}{space 11}g {c |}{col 14}{res}{space 2}  2087742{col 26}{space 2}  1994848{col 37}{space 1}    1.05{col 46}{space 3}0.295{col 54}{space 4} -1822453{col 67}{space 3}  5997937
+{txt}{space 11}o {c |}{col 14}{res}{space 2} -7770989{col 26}{space 2}  3067963{col 37}{space 1}   -2.53{col 46}{space 3}0.011{col 54}{space 4}-1.38e+07{col 67}{space 3} -1757330
+{txt}{space 11}e {c |}{col 14}{res}{space 2}   490618{col 26}{space 2} 147633.1{col 37}{space 1}    3.32{col 46}{space 3}0.001{col 54}{space 4} 201235.5{col 67}{space 3} 780000.6
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 2.30e+07{col 26}{space 2}  5046793{col 37}{space 1}    4.56{col 46}{space 3}0.000{col 54}{space 4} 1.31e+07{col 67}{space 3} 3.29e+07
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\marco\Documents\Bootcamp Data Science\project portofolio\Regression stata pov.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}11 Jul 2021, 18:22:19
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

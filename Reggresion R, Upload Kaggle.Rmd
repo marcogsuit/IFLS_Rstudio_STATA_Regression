@@ -1,0 +1,24 @@
+```{r}
+#Install the corresponding packages
+library(haven) #to Import data from STATA
+library(tidyverse)
+```
+
+```{r}
+IFLS_Transfer_Data <- read_dta("IFLS_Transfer_Data.dta")
+```
+
+```{r}
+#Donor Model Regression
+set.seed(123)
+bene_model <- lm (tb ~ y + a + m + sex + g + o +  e, data = IFLS_Transfer_Data)
+summary(bene_model)
+```
+
+```{r}
+#Donor Model Regression
+set.seed(123)
+donor_model <- lm (td ~ y + a + m + sex + g + o +  e, data = IFLS_Transfer_Data)
+summary(donor_model)
+```
+
